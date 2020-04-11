@@ -1,11 +1,13 @@
-// destructuring assignment of the Schema class
-const mongoose, { Schema } = require('mongoose');
+const mongoose = require('mongoose');
 
-const toySchema = new Schema({
+// destructuring assignment of the Schema class from mongoose
+const { Schema } = mongoose;
+
+const toySchema = new mongoose.Schema({
     name: String,
-    yearMade: Nummber,
+    yearMade: Number,
     maker: [String],
-    stillAvailable: Boolean
+    stillAvailable: Boolean,
 });
 
 // model() is used to compile a schema to a model
