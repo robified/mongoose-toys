@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mongoose Toys</title>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <h2>Enter a New Toy</h2>
+        <form action="/toys" method="POST">
+            <label for="">Name: <input type="text" name="name" id="" /> </label
+            ><br />
+
+            <label for=""
+                >Year Made: <input type="text" name="yearMade" id="" /> </label
+            ><br />
+
+            <label for="">
+                Makes (separate makers with commas):
+                <input type="text" name="maker" id="" /> </label
+            ><br />
+
+            <label for=""
+                >Still Available:
+                <input
+                    type="checkbox"
+                    name="stillAvailable"
+                    id=""
+                    checked
+                /> </label
+            ><br />
+
+            <input type="submit" value="Add Toy" />
+        </form>
+    </body>
+</html>
