@@ -3,7 +3,15 @@ const Toy = require('../../models/toy');
 module.exports = {
     new: newToy,
     create,
+    index,
 };
+
+function index(req, res) {
+    Toy.find({}, function (err, toys) {
+        if (err) return next(err);
+        res.render('toys/index', { toys });
+    });
+}
 
 function create(req, res) {
     // convert Still Available's checkbox
@@ -30,7 +38,7 @@ function create(req, res) {
     toy.save(function (err) {
         if (err) return res.render('/toys/new');
         console.log(toy);
-        res.redirect('/toys/new');
+        res.redirect('/toys');
     });
 }
 
